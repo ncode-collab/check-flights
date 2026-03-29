@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+google-genai
+duffel-api
+python-dotenv
+pydantic
+jinja2

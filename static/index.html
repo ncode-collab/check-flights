@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Flight Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Panel: Flight Search Results -->
+        <div class="panel results-panel">
+            <header>
+                <h2>Flight Search Results</h2>
+            </header>
+            <div id="flight-results" class="flight-results">
+                <div class="empty-results">No flights searched yet.</div>
+            </div>
+        </div>
+
+        <!-- Right Panel: AI Chat Interface -->
+        <div class="panel chat-panel">
+            <header>
+                <h2>AI Assistant</h2>
+            </header>
+            <div id="chat-history" class="chat-history">
+                <div class="message assistant">Hello! Where would you like to fly to?</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="e.g., Fly from London to Paris next Monday">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

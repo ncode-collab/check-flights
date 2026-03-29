@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.panel header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+/* Left Panel: Chat */
+.chat-panel {
+    flex: 1;
+    max-width: 400px;
+    background-color: #fafafa;
+}
+
+.chat-history {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.message {
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 85%;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+.message.assistant {
+    align-self: flex-start;
+    background-color: #e9e9eb;
+    color: #333;
+}
+
+.chat-input {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Right Panel: Results */
+.results-panel {
+    flex: 2;
+    background-color: #fff;
+    overflow-y: auto;
+}
+
+.flight-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.empty-results {
+    color: #888;
+    text-align: center;
+    grid-column: 1 / -1;
+    margin-top: 100px;
+}
+
+.flight-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.flight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.flight-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.airline {
+    font-weight: bold;
+    color: #333;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.flight-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-box {
+    text-align: center;
+}
+
+.time {
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block;
+}
+
+.iata {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.duration-box {
+    text-align: center;
+    position: relative;
+    flex: 1;
+}
+
+.duration-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.duration {
+    background-color: #fff;
+    padding: 0 10px;
+    font-size: 0.8em;
+    color: #888;
+    position: relative;
+    z-index: 2;
+}
+
+.stops {
+    display: block;
+    font-size: 0.7em;
+    color: #dc3545;
+    margin-top: 5px;
+}
